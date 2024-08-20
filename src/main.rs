@@ -111,10 +111,24 @@ fn write_quotes_to_file(collection: &Collection) -> anyhow::Result<()> {
         writeln!(file, "\n# {}\n", author)?;
 
         // Get the quotes for the author
-        let quotes = collection.collection.get(author).unwrap();
-        for quote in quotes {
-            // Write each quote and its book in Markdown format
-            writeln!(file, "> \"{}\"\n\n- *{}*\n", quote.quote, quote.book)?;
+        if let Some(quotes) = collection.collection.get(author) {
+            // Group quotes by book title
+            let mut quotes_by_book: HashMap<&str, Vec<&Quote>> = HashMap::new();
+            for quote in quotes {
+                quotes_by_book
+                    .entry(&quote.book)
+                    .or_insert_with(Vec::new)
+                    .push(quote);
+            }
+
+            // Write each book title and its quotes
+            for (book, book_quotes) in quotes_by_book {
+                writeln!(file, "## {}\n", book)?;
+                for quote in book_quotes {
+                    writeln!(file, "> \"{}\"", quote.quote)?;
+                }
+                writeln!(file)?; // Add an extra newline for spacing
+            }
         }
     }
     Ok(())
