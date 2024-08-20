@@ -109,6 +109,19 @@ fn write_quotes_to_file(collection: &Collection) -> anyhow::Result<()> {
     let mut file = File::create("README.md")?;
 
     let authors = authors(collection);
+
+    // Write the index at the top of the file
+    writeln!(file, "# Index\n")?;
+    for author in &authors {
+        writeln!(
+            file,
+            "- [{}](#{})",
+            author.to_lowercase().replace(" ", "-"),
+            author.to_lowercase().replace(" ", "-")
+        )?;
+    }
+    writeln!(file)?; // Add an extra newline
+
     for author in authors {
         // Write the author's name as a Markdown heading
         writeln!(file, "\n# {}\n", author)?;
