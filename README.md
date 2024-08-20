@@ -43,16 +43,6 @@
 
 # Albert Camus
 
-## El verano
-
-- "Es la romanza que precede al crimen. cabce59843a5a84f289c1152d380b3f548381ebd8a04e43166f241e8bcb23edd"
-- "Así, Nerval, por culpa de una desgraciada noche, ha sido ahorcado dos veces: primero por él mismo, porque era desdichado, a continuación por su leyenda, que ayuda a algunos a vivir. 0d72a1576e562d0681773e85acc0879cff095f92bc211fa3caefa31d96cba6e5"
-- "Evoca ese fuego de estopa que Alejandro VI hacía que quemasen con frecuencia delante de él para no olvidar que toda gloria de este mundo es como un humo que pasa. 5ebb128fe143c50f74ae5bbecdd04dc55fec7ee47a3aaa463d816625b0876436"
-- "Ningún hombre se ha atrevido nunca a pintarse tal como es. ec6b7dead0bfb1c1384ac0b1fd3af7c140f003ce4bf7f3ef42aaf05c972ef3fb"
-- "No hay amor sin un poco de inocencia. 5e6458348121433d6f442145cbcb690a335a319cabda8403b0a4c9a4cfeafaf3"
-- "Inocentes sin saberlo en un principio, ahora éramos culpables sin quererlo: c89a7711a59a9aad79ef190d9bd0093639ad1f1ab11485a386d8bdf727d27f91"
-- "Ese día comprendí que había dos verdades y que una de ellas nunca debía decirse. 3e5111510b794d4206aa5c07664218be81111006da5f42022ec11d2aacce6c7a"
-
 ## El mito de Sisifo
 
 - "Oh, alma mía, no aspires a la vida inmortal, pero agota el campo de lo posible. 8c3b9f3017847a1e029b13bb9293eff8f0f38d70045cb934f9e56a9445ed20e5"
@@ -76,6 +66,16 @@
 - "El corazón humano tiene una fastidiosa tendencia a llamar destino solamente a lo que lo aplasta. Pero también la felicidad, a su manera, carece de razón, pues es inevitable. Sin embargo, el hombre moderno se atribuye su mérito, cuando no la desconoce. 495c1333a4661c1745316500c11fcd534d11becbb4d7767997320f81b97101aa"
 - "No hay más que un problema filosófico verdaderamente serio: el suicidio. 9ae52bafbd3d6d6286671c2edaaf2446a73b041ce77a0247a5ca6d3e0291322c"
 - "En psicología, como en lógica, hay verdades, pero no verdad. 572eb892176506de94bf2c9077aa7423d23f3d7e5673718729b3021dee9711a8"
+
+## El verano
+
+- "Es la romanza que precede al crimen. cabce59843a5a84f289c1152d380b3f548381ebd8a04e43166f241e8bcb23edd"
+- "Así, Nerval, por culpa de una desgraciada noche, ha sido ahorcado dos veces: primero por él mismo, porque era desdichado, a continuación por su leyenda, que ayuda a algunos a vivir. 0d72a1576e562d0681773e85acc0879cff095f92bc211fa3caefa31d96cba6e5"
+- "Evoca ese fuego de estopa que Alejandro VI hacía que quemasen con frecuencia delante de él para no olvidar que toda gloria de este mundo es como un humo que pasa. 5ebb128fe143c50f74ae5bbecdd04dc55fec7ee47a3aaa463d816625b0876436"
+- "Ningún hombre se ha atrevido nunca a pintarse tal como es. ec6b7dead0bfb1c1384ac0b1fd3af7c140f003ce4bf7f3ef42aaf05c972ef3fb"
+- "No hay amor sin un poco de inocencia. 5e6458348121433d6f442145cbcb690a335a319cabda8403b0a4c9a4cfeafaf3"
+- "Inocentes sin saberlo en un principio, ahora éramos culpables sin quererlo: c89a7711a59a9aad79ef190d9bd0093639ad1f1ab11485a386d8bdf727d27f91"
+- "Ese día comprendí que había dos verdades y que una de ellas nunca debía decirse. 3e5111510b794d4206aa5c07664218be81111006da5f42022ec11d2aacce6c7a"
 
 
 # Alessandro Baricco
@@ -192,15 +192,15 @@
 
 # Fiódor Dostoyevski
 
+## Memorias del subsuelo
+
+- "Porque un hombre inteligente del siglo XIX debe, y está obligado moralmente, ser un sujeto fundamentalmente sin carácter; puesto que un hombre con carácter, es decir, toda una personalidad, es una criatura limitada por excelencia. c53baff6a6307e684b1c9220c5d16d16270f02eec06620a67b0bbb490df67ad6"
+
 ## El idiota
 
 - "mí! En ese caso, ¡convertiría cada minuto en un siglo entero, sin perder uno solo, apuraría cada instante, y no malgastaría nada!». 79e00ea4ca7d4430000f6443f426af87174db01efdebffe1ef94ec420a9129e5"
 - "le dije que ni él ni yo les enseñábamos 5bd1ed6f386f84b3fa6781f76a5e1bb74a676fa2eead04213493d13bc2974deb"
 - "nada, y que de hecho eran ellos los que nos enseñaban a nosotros. 6b4c00b0a995f7dde551a010e1f0d8c47f3dcba46349d70ea1097a68c2ad4cd5"
-
-## Memorias del subsuelo
-
-- "Porque un hombre inteligente del siglo XIX debe, y está obligado moralmente, ser un sujeto fundamentalmente sin carácter; puesto que un hombre con carácter, es decir, toda una personalidad, es una criatura limitada por excelencia. c53baff6a6307e684b1c9220c5d16d16270f02eec06620a67b0bbb490df67ad6"
 
 
 # Franz Kafka
@@ -310,6 +310,13 @@
 
 # Jorge Luis Borges
 
+## Ficciones
+
+- "Una de las escuelas de Tlön llega a negar el tiempo: razona que el presente es indefinido, que el futuro no tiene realidad sino como esperanza presente, que el pasado no tiene realidad sino como recuerdo presente 67a9a6f9901795f3ae5282d0f658b1f7a5aca058a3f20cba838bcfc255e4e227"
+- "metempsicosis.*[En el decurso de esta noticia, me he 790c52431ea3201fe3e788dabd8403bc780c33205470667435671427bbe6b1b1"
+- "enteros: a su furor higiénico, ascético, 13d1a1f62d200855c3afc560e94b51af6c4281c741388bfe6b9e2d322c782fb0"
+- "Que el cielo exista, aunque mi lugar sea el infierno. f1df1d2e4682fc9b6b1c73965b81ef8dbd07a6f0931665c39f949974d95c46a2"
+
 ## El Aleph
 
 - "Como Cornelio Agrippa, soy dios, soy héroe, soy filósofo, soy demonio y soy mundo, lo cual es una fatigosa manera de decir que no soy. b635793cbbd78b547af11e1b5f71331f2c3c1834c5e829adfef52f460ab1c6e5"
@@ -322,13 +329,6 @@
 - "ello es una piadosa exageración, porque no hay hombre que esté libre de culpa. 52a70ebe5d89863f1811c3e87fc75d8c698ca929fc9c61f4a0b23f3e91135268"
 - "Comprendí que el trabajo del poeta no estaba en la poesía; estaba en la invención de razones para que la poesía fuera admirable; 1ea1c6fe8ac13e79d3acf0be19e49481b492b1b718962f408521c9688c987758"
 - "vi tu cara, y sentí vértigo y lloré, porque mis ojos habían visto ese objeto secreto y conjetural, cuyo nombre usurpan los hombres, pero que ningún hombre ha mirado: el inconcebible universo. e694656fb8bc7f0593a3ef3932f89c1f186479fb876caa46daf78fca3e1b89e8"
-
-## Ficciones
-
-- "Una de las escuelas de Tlön llega a negar el tiempo: razona que el presente es indefinido, que el futuro no tiene realidad sino como esperanza presente, que el pasado no tiene realidad sino como recuerdo presente 67a9a6f9901795f3ae5282d0f658b1f7a5aca058a3f20cba838bcfc255e4e227"
-- "metempsicosis.*[En el decurso de esta noticia, me he 790c52431ea3201fe3e788dabd8403bc780c33205470667435671427bbe6b1b1"
-- "enteros: a su furor higiénico, ascético, 13d1a1f62d200855c3afc560e94b51af6c4281c741388bfe6b9e2d322c782fb0"
-- "Que el cielo exista, aunque mi lugar sea el infierno. f1df1d2e4682fc9b6b1c73965b81ef8dbd07a6f0931665c39f949974d95c46a2"
 
 
 # José Saramago
@@ -458,6 +458,10 @@
 
 # Oscar Wilde
 
+## La importancia de discutirlo todo
+
+- "El hombre es menos el que es cuando habla con su propia voz. Dale una máscara y te dirá la verdad. ERNEST: 38ba7e15347b427aacbb67c77fc7ed69fecba2bb3a082a4621574508f4aa7583"
+
 ## La decadencia de la mentira
 
 - "La Naturaleza tiene buenas intenciones, por supuesto; pero, como dijo Aristóteles, no sabe hacerlas realidad. c4295d26512386acb275bc671ae8657baef4e5f22ca50744133787ba2991d8f0"
@@ -472,7 +476,6 @@
 - "el objetivo del mentiroso no es otro que encantar, deleitar, dar placer. 8a792bcbdc7809efb2fd8d3bccf514763f9f30e7451f2b0716f2357fd4fb8043"
 - "Para excusarse buscarán amparo tras el escudo de aquel que hizo al mago Próspero y le dio por servidores a Calibán y Ariel, que oyó a los tritones hacer sonar sus trompas en torno a los arrecifes coralinos de la Isla Encantada, y a las hadas intercambiar sus cantos en un soto de Atenas; que condujo a los reyes fantasmas en oscuro cortejo por el brumoso páramo escocés y escondió a Hécate en una cueva con las extrañas hermanas. Apelarán a Shakespeare, como siempre, y citarán el pasaje de marras, olvidando que ese desgraciado aforismo de que el Arte sostiene el espejo a la Naturaleza lo dice Hamlet premeditadamente para convencer a los circunstantes de su absoluta demencia en toda cuestión artística». 715b5faa3bfcef4cfacd44179f7dd32d030650cc3f801187e56cd6d65daa122c"
 - "¡Pero no creerás en serio que la Vida imita al Arte, que de hecho la Vida es el espejo y el Arte la realidad! f1436a728c889236ed31fe3a7b84ae57b0b9d0fd72b7980932b161da00d9b7de"
-- "Schopenhauer ha analizado el pesimismo que caracteriza al pensamiento moderno, pero fue Hamlet el que lo inventó ef113960be306371e8854d8a30267b782cd9d590152ecd3800c7e06b8068c41b"
 - "El nihilista, ese extraño mártir que no tiene fe, que va a la hoguera sin entusiasmo y muere por lo que no 7e6465964308c2766133a3cb47ea5ff2eb5741843b38cb09e8cc54a9ffc2a43b"
 - "Schopenhauer ha analizado el pesimismo que caracteriza al pensamiento moderno, pero fue Hamlet el que lo inventó. El mundo se ha hecho triste porque un títere estuvo un día melancólico. El nihilista, ese extraño mártir que no tiene fe, que va a la hoguera sin entusiasmo y muere por lo que no cree, es un producto puramente literario. Lo inventó Turguéniev y lo completó Dostoievski. Robespierre salió de las páginas de Rousseau, tan cierto como que el Palacio del Pueblo surgió del cascote de una novela[23]. dd99c2a1db6c4b70a7d3c3f5f793d1560432f8c02801843375b00a41f703a019"
 - "Adsum b5838f360e6091d1c906490f8c17543d251219aa53134612003ae01b7b64ac1a"
@@ -493,10 +496,6 @@
 - "En cuestiones de gran importancia lo esencial es el estilo y no la sinceridad. 0c23ab16823f0d995dbf06184fe2cedc66430249d9e140e502272ab6b360ee74"
 - "Gundelinda, es una cosa terrible para un hombre descubrir de pronto que durante toda su vida no ha dicho más que la verdad. ¿Puedes perdonarme? 68bcd75cd4efe353e3fa93c1842ffb8101e01a057e7ed82932cd825ae7b5a4c7"
 
-## La importancia de discutirlo todo
-
-- "El hombre es menos el que es cuando habla con su propia voz. Dale una máscara y te dirá la verdad. ERNEST: 38ba7e15347b427aacbb67c77fc7ed69fecba2bb3a082a4621574508f4aa7583"
-
 
 # Rick Rubin
 
@@ -513,10 +512,10 @@
 
 # Sófocles
 
-## Edipo Rey
+## Antígona
 
-- "—El que no tiene temor ante los hechos tampoco tiene miedo a la palabra. c85b3eb56d15f85e4a178430b554a050ab72f4e71aa2292054c20420723022a7"
-- "CREONTE. —No lo sé. De lo que no comprendo, prefiero guardar silencio. 2a30bb844ddd4bba985d935e7dd941649040d6122af1f023f0e9b1399721c34e"
+- "ANTÍGONA. —No nací para compartir el odio sino el amor. c635a98cc1b022a96cd925e6fcae345016a22f1e6e53bde229a503ceb86f2a55"
+- "Eros es el muchacho, hijo de Afrodita, que dispara dardos al corazón de dioses y hombres para enamorarlos. La literatura, sobre todo, posterior a Sófocles, asimila los efectos de sus dardos a enfermedad que puede llevar a la locura. 5aa489f36ccb0a87f92f62256ffc9e5d576ca043c534eb66c1e343f0b0dd93fe"
 
 ## Edipo en Colono
 
@@ -524,10 +523,10 @@
 - "pues sé que soy hombre y que el día de mañana no lo tengo más seguro que lo puedas tener tú. 08b0c532e0929db7234a90b5432ec4f26b4044f338ee2d9801ede492bf311b39"
 - "CORIFEO. —(A un servidor de Creonte.) Aparta de tus manos a la muchacha, pronto. CREONTE. —No mandes en lo que no imperas. CORIFEO. —Suéltalo, te digo. CREONTE. —(Al mismo servidor.) Y yo que sigas tu camino. 0dfd46e270272f1e199211bee8277982bbd8d58805933cd64d7e6a0dc95d88b6"
 
-## Antígona
+## Edipo Rey
 
-- "ANTÍGONA. —No nací para compartir el odio sino el amor. c635a98cc1b022a96cd925e6fcae345016a22f1e6e53bde229a503ceb86f2a55"
-- "Eros es el muchacho, hijo de Afrodita, que dispara dardos al corazón de dioses y hombres para enamorarlos. La literatura, sobre todo, posterior a Sófocles, asimila los efectos de sus dardos a enfermedad que puede llevar a la locura. 5aa489f36ccb0a87f92f62256ffc9e5d576ca043c534eb66c1e343f0b0dd93fe"
+- "—El que no tiene temor ante los hechos tampoco tiene miedo a la palabra. c85b3eb56d15f85e4a178430b554a050ab72f4e71aa2292054c20420723022a7"
+- "CREONTE. —No lo sé. De lo que no comprendo, prefiero guardar silencio. 2a30bb844ddd4bba985d935e7dd941649040d6122af1f023f0e9b1399721c34e"
 
 
 # Søren Kierkegaard
@@ -553,14 +552,14 @@
 
 # Terry Pratchett
 
-## Mort
-
-- "ser envenenado dolorosamente y enterrado en cal viva. Binky descendió sobre la b90b097737cc6dc0c1b70316b110d465a21369df2bf6b402460864f843cb4f74"
-
 ## La luz fantástica
 
 - "—Ah. —Meditó un instante. Luego intentó algo—. Supongo que no sabrás por casualidad cómo salir de este bosque, ¿verdad? —No. No me muevo mucho —respondió el árbol. —Debe de ser una vida bastante sosa. —No sabría decirte. Nunca he sido otra cosa. Rincewind lo examinó de cerca. —¿Eres mágico? —preguntó. —Nadie me lo había dicho —replicó el árbol—. ef022efc131927fa819a19a78ae56ae045739ede4a067d0b103c698e6cd1a44a"
 - "—¿Eso lo has dicho tú? —preguntó al final Rincewind. —Sí. —¿Y eso también? —Sí. —Ah. —Meditó un instante. Luego intentó algo—. Supongo que no sabrás por casualidad cómo salir de este bosque, ¿verdad? —No. No me muevo mucho —respondió el árbol. —Debe de ser una vida bastante sosa. —No sabría decirte. Nunca he sido otra cosa. 521360a2c02ecfeeff6952db194aabd56ef8b84dcef8d523ad1550ac632992ac"
+
+## Mort
+
+- "ser envenenado dolorosamente y enterrado en cal viva. Binky descendió sobre la b90b097737cc6dc0c1b70316b110d465a21369df2bf6b402460864f843cb4f74"
 
 
 # Truman Capote
@@ -572,14 +571,14 @@
 
 # Vladimir Nabokov
 
-## Lolita
-
-- "Pueden confiar en que la prosa de los asesinos sea siempre elegante. 41dd1cd8b328077fa1a2a90e5764985a782e1b26973c615786ad34e33fa0dac3"
-
 ## La defensa
 
 - "«Las heroínas de Turgueniev lo hacían. ¿Soy menos que ellas?». 30bc7d751e82939572fb2b597f79ecf9091fcfc9eb7d07afb0c903ae2b38e59b"
 - "Lo llevó varias veces al museo y le mostró sus cuadros favoritos y le explicó que en Flandes, donde había lluvia y niebla, los pintores usaban colores muy vivos, mientras que en España, un país de sol, había nacido el más sombrío de todos los maestros. 4d2ef34aa4134f5053c74456d34b1fe7dbfb4c3f4d742a5527f1a94d77cbbbf4"
+
+## Lolita
+
+- "Pueden confiar en que la prosa de los asesinos sea siempre elegante. 41dd1cd8b328077fa1a2a90e5764985a782e1b26973c615786ad34e33fa0dac3"
 
 
 # Voltaire
