@@ -1,8 +1,11 @@
+use core::panic;
 use std::{
-    collections::HashMap,
+    collections::{HashMap, HashSet},
     fs::{read_to_string, File},
+    io::BufReader,
 };
 
+use std::io::BufRead;
 use std::io::Write;
 
 use anyhow::Context;
@@ -14,7 +17,7 @@ struct Quote {
     author: String,
     book: String,
     quote: String,
-    hash: Vec<u8>,
+    hash: String,
 }
 
 #[derive(Debug)]
@@ -70,7 +73,7 @@ impl TryFrom<&[String]> for Quote {
         let author = Quote::try_author(&chunk[0])?;
         let book = Quote::try_book(&chunk[0])?;
         let quote = chunk[3].to_string();
-        let hash = Sha256::digest(&quote).to_vec();
+        let hash = format!("{:x}", Sha256::digest(&quote));
         Ok(Quote {
             author,
             book,
@@ -125,7 +128,7 @@ fn write_quotes_to_file(collection: &Collection) -> anyhow::Result<()> {
             for (book, book_quotes) in quotes_by_book {
                 writeln!(file, "## {}\n", book)?;
                 for quote in book_quotes {
-                    writeln!(file, "- \"{}\"", quote.quote)?;
+                    writeln!(file, "- \"{} {}\"", quote.quote, quote.hash)?;
                 }
                 writeln!(file)?; // Add an extra newline for spacing
             }
@@ -134,12 +137,32 @@ fn write_quotes_to_file(collection: &Collection) -> anyhow::Result<()> {
     Ok(())
 }
 
+fn read_hashes_from_file() -> anyhow::Result<HashSet<String>> {
+    let file_path = "filters.txt";
+    let file = File::open(file_path)?;
+    let reader = BufReader::new(file);
+
+    let mut hashes = HashSet::new();
+    for hash in reader.lines() {
+        let hash = hash?;
+        hashes.insert(hash);
+    }
+
+    Ok(hashes)
+}
+
 fn main() -> anyhow::Result<()> {
     let filename = "My Clippings.txt";
     let lines = read_lines(filename);
-    let quotes = lines
+    let all_quotes = lines
         .chunks(5)
         .flat_map(|c| Quote::try_from(c))
+        .collect::<Vec<Quote>>();
+
+    let filters = read_hashes_from_file()?;
+    let quotes = all_quotes
+        .into_iter()
+        .filter(|quote| !filters.contains(&quote.hash))
         .collect::<Vec<Quote>>();
 
     let mut collection = Collection::new();
