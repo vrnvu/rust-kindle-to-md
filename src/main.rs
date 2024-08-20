@@ -125,7 +125,7 @@ fn write_quotes_to_file(collection: &Collection) -> anyhow::Result<()> {
             for (book, book_quotes) in quotes_by_book {
                 writeln!(file, "## {}\n", book)?;
                 for quote in book_quotes {
-                    writeln!(file, "> \"{}\"", quote.quote)?;
+                    writeln!(file, "- \"{}\"", quote.quote)?;
                 }
                 writeln!(file)?; // Add an extra newline for spacing
             }
