@@ -37,9 +37,8 @@ impl TryFrom<&String> for Author {
             .get(1)
             .context("author was not found")?
             .as_str()
-            .trim()
-            .to_string();
-        Ok(Author(author))
+            .trim();
+        Ok(author.into())
     }
 }
 
@@ -67,9 +66,8 @@ impl TryFrom<&String> for Book {
             .find(value)
             .context("book was not found")?
             .as_str()
-            .trim()
-            .to_string();
-        Ok(Book(book))
+            .trim();
+        Ok(book.into())
     }
 }
 
