@@ -1,7 +1,4 @@
-use std::{
-    collections::{BTreeMap, HashMap},
-    fmt::Display,
-};
+use std::{collections::BTreeMap, fmt::Display};
 
 use anyhow::Context;
 use regex::Regex;
@@ -108,6 +105,49 @@ impl Collection {
             .push(quote);
     }
 
+    pub fn write_quotes_with_hash_to_file(
+        self,
+        file: &mut impl std::io::Write,
+    ) -> anyhow::Result<()> {
+        let authors = self.authors();
+
+        // Write the index at the top of the file
+        writeln!(file, "# Index\n")?;
+        for author in authors.as_slice() {
+            writeln!(
+                file,
+                "- [{}](#{})",
+                author.0.to_lowercase().replace(' ', "-"),
+                author.0.to_lowercase().replace(' ', "-")
+            )?;
+        }
+        writeln!(file)?; // Add an extra newline
+
+        for author in authors {
+            // Write the author's name as a Markdown heading
+            writeln!(file, "\n# {}\n", author)?;
+
+            // Get the quotes for the author
+            if let Some(quotes) = self.get(author) {
+                // Group quotes by book title
+                let mut quotes_by_book: BTreeMap<&Book, Vec<&Quote>> = BTreeMap::new();
+                for quote in quotes {
+                    quotes_by_book.entry(&quote.book).or_default().push(quote);
+                }
+
+                // Write each book title and its quotes
+                for (book, book_quotes) in quotes_by_book {
+                    writeln!(file, "## {}\n", book)?;
+                    for quote in book_quotes {
+                        writeln!(file, "- \"{} {}\"", quote.quote, quote.hash)?;
+                    }
+                    writeln!(file)?; // Add an extra newline for spacing
+                }
+            }
+        }
+        Ok(())
+    }
+
     pub fn write_quotes_to_file(self, file: &mut impl std::io::Write) -> anyhow::Result<()> {
         let authors = self.authors();
 
@@ -130,16 +170,19 @@ impl Collection {
             // Get the quotes for the author
             if let Some(quotes) = self.get(author) {
                 // Group quotes by book title
-                let mut quotes_by_book: HashMap<&Book, Vec<&Quote>> = HashMap::new();
+                let mut quotes_by_book: BTreeMap<&Book, Vec<String>> = BTreeMap::new();
                 for quote in quotes {
-                    quotes_by_book.entry(&quote.book).or_default().push(quote);
+                    quotes_by_book
+                        .entry(&quote.book)
+                        .or_default()
+                        .push(quote.quote.clone());
                 }
 
                 // Write each book title and its quotes
                 for (book, book_quotes) in quotes_by_book {
                     writeln!(file, "## {}\n", book)?;
                     for quote in book_quotes {
-                        writeln!(file, "- \"{} {}\"", quote.quote, quote.hash)?;
+                        writeln!(file, "- \"{}\"", quote)?;
                     }
                     writeln!(file)?; // Add an extra newline for spacing
                 }
