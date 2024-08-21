@@ -5,7 +5,6 @@ use std::{
 };
 
 use std::io::BufRead;
-use std::io::Write;
 
 use anyhow::Context;
 use regex::Regex;
@@ -36,6 +35,22 @@ impl Collection {
             .entry(quote.author.clone())
             .or_default()
             .push(quote);
+    }
+}
+
+impl Extend<Quote> for Collection {
+    fn extend<T: IntoIterator<Item = Quote>>(&mut self, iter: T) {
+        for quote in iter {
+            self.add_quote(quote);
+        }
+    }
+}
+
+impl FromIterator<Quote> for Collection {
+    fn from_iter<T: IntoIterator<Item = Quote>>(iter: T) -> Self {
+        let mut collection = Collection::new();
+        collection.extend(iter);
+        collection
     }
 }
 
@@ -93,20 +108,16 @@ fn read_lines(filename: &str) -> Vec<String> {
 }
 
 fn authors(collection: &Collection) -> Vec<&String> {
-    let mut authors: Vec<&String> = collection
-        .collection
-        .keys()
-        .clone()
-        .collect::<Vec<&String>>();
+    let mut authors: Vec<&String> = collection.collection.keys().collect::<Vec<&String>>();
 
     authors.sort();
     authors
 }
 
-fn write_quotes_to_file(collection: &Collection) -> anyhow::Result<()> {
-    // Open the file in write mode, creating it if it doesn't exist
-    let mut file = File::create("README.md")?;
-
+fn write_quotes_to_file(
+    file: &mut impl std::io::Write,
+    collection: &Collection,
+) -> anyhow::Result<()> {
     let authors = authors(collection);
 
     // Write the index at the top of the file
@@ -146,8 +157,7 @@ fn write_quotes_to_file(collection: &Collection) -> anyhow::Result<()> {
     Ok(())
 }
 
-fn read_hashes_from_file() -> anyhow::Result<HashSet<String>> {
-    let file_path = "filters.txt";
+fn read_hashes_from_file(file_path: &str) -> anyhow::Result<HashSet<String>> {
     let file = File::open(file_path)?;
     let reader = BufReader::new(file);
 
@@ -161,28 +171,21 @@ fn read_hashes_from_file() -> anyhow::Result<HashSet<String>> {
 }
 
 fn main() -> anyhow::Result<()> {
-    let filename = "My Clippings.txt";
-    let lines = read_lines(filename);
-    let all_quotes = lines
+    let file_clippings = "My Clippings.txt";
+    let lines = read_lines(file_clippings);
+
+    let file_filters = "filters.txt";
+    let filters = read_hashes_from_file(file_filters)?;
+
+    let collection = lines
         .chunks(5)
         .flat_map(Quote::try_from)
-        .collect::<Vec<Quote>>();
-
-    let filters = read_hashes_from_file()?;
-    let quotes = all_quotes
-        .into_iter()
         .filter(|quote| !filters.contains(&quote.hash))
-        .collect::<Vec<Quote>>();
+        .collect::<Collection>();
 
-    let collection = {
-        let mut collection = Collection::new();
-        for quote in quotes {
-            collection.add_quote(quote);
-        }
-        collection
-    };
-
-    write_quotes_to_file(&collection)?;
+    // Open the file in write mode, creating it if it doesn't exist
+    let mut file_write = File::create("README.md")?;
+    write_quotes_to_file(&mut file_write, &collection)?;
 
     Ok(())
 }
