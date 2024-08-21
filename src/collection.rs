@@ -105,15 +105,14 @@ impl Collection {
             .push(quote);
     }
 
-    pub fn write_quotes_with_hash_to_file(
-        self,
+    fn write_index(
+        &self,
+        authors: &[&Author],
         file: &mut impl std::io::Write,
     ) -> anyhow::Result<()> {
-        let authors = self.authors();
-
         // Write the index at the top of the file
         writeln!(file, "# Index\n")?;
-        for author in authors.as_slice() {
+        for author in authors {
             writeln!(
                 file,
                 "- [{}](#{})",
@@ -122,6 +121,15 @@ impl Collection {
             )?;
         }
         writeln!(file)?; // Add an extra newline
+        Ok(())
+    }
+
+    pub fn write_quotes_with_hash_to_file(
+        self,
+        file: &mut impl std::io::Write,
+    ) -> anyhow::Result<()> {
+        let authors = self.authors();
+        self.write_index(&authors, file)?;
 
         for author in authors {
             // Write the author's name as a Markdown heading
@@ -150,18 +158,7 @@ impl Collection {
 
     pub fn write_quotes_to_file(self, file: &mut impl std::io::Write) -> anyhow::Result<()> {
         let authors = self.authors();
-
-        // Write the index at the top of the file
-        writeln!(file, "# Index\n")?;
-        for author in authors.as_slice() {
-            writeln!(
-                file,
-                "- [{}](#{})",
-                author.0.to_lowercase().replace(' ', "-"),
-                author.0.to_lowercase().replace(' ', "-")
-            )?;
-        }
-        writeln!(file)?; // Add an extra newline
+        self.write_index(&authors, file)?;
 
         for author in authors {
             // Write the author's name as a Markdown heading
