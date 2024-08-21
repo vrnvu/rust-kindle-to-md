@@ -43,16 +43,6 @@
 
 # Albert Camus
 
-## El verano
-
-- "Es la romanza que precede al crimen. cabce59843a5a84f289c1152d380b3f548381ebd8a04e43166f241e8bcb23edd"
-- "Así, Nerval, por culpa de una desgraciada noche, ha sido ahorcado dos veces: primero por él mismo, porque era desdichado, a continuación por su leyenda, que ayuda a algunos a vivir. 0d72a1576e562d0681773e85acc0879cff095f92bc211fa3caefa31d96cba6e5"
-- "Evoca ese fuego de estopa que Alejandro VI hacía que quemasen con frecuencia delante de él para no olvidar que toda gloria de este mundo es como un humo que pasa. 5ebb128fe143c50f74ae5bbecdd04dc55fec7ee47a3aaa463d816625b0876436"
-- "Ningún hombre se ha atrevido nunca a pintarse tal como es. ec6b7dead0bfb1c1384ac0b1fd3af7c140f003ce4bf7f3ef42aaf05c972ef3fb"
-- "No hay amor sin un poco de inocencia. 5e6458348121433d6f442145cbcb690a335a319cabda8403b0a4c9a4cfeafaf3"
-- "Inocentes sin saberlo en un principio, ahora éramos culpables sin quererlo: c89a7711a59a9aad79ef190d9bd0093639ad1f1ab11485a386d8bdf727d27f91"
-- "Ese día comprendí que había dos verdades y que una de ellas nunca debía decirse. 3e5111510b794d4206aa5c07664218be81111006da5f42022ec11d2aacce6c7a"
-
 ## El mito de Sisifo
 
 - "Oh, alma mía, no aspires a la vida inmortal, pero agota el campo de lo posible. 8c3b9f3017847a1e029b13bb9293eff8f0f38d70045cb934f9e56a9445ed20e5"
@@ -77,19 +67,29 @@
 - "No hay más que un problema filosófico verdaderamente serio: el suicidio. 9ae52bafbd3d6d6286671c2edaaf2446a73b041ce77a0247a5ca6d3e0291322c"
 - "En psicología, como en lógica, hay verdades, pero no verdad. 572eb892176506de94bf2c9077aa7423d23f3d7e5673718729b3021dee9711a8"
 
+## El verano
+
+- "Es la romanza que precede al crimen. cabce59843a5a84f289c1152d380b3f548381ebd8a04e43166f241e8bcb23edd"
+- "Así, Nerval, por culpa de una desgraciada noche, ha sido ahorcado dos veces: primero por él mismo, porque era desdichado, a continuación por su leyenda, que ayuda a algunos a vivir. 0d72a1576e562d0681773e85acc0879cff095f92bc211fa3caefa31d96cba6e5"
+- "Evoca ese fuego de estopa que Alejandro VI hacía que quemasen con frecuencia delante de él para no olvidar que toda gloria de este mundo es como un humo que pasa. 5ebb128fe143c50f74ae5bbecdd04dc55fec7ee47a3aaa463d816625b0876436"
+- "Ningún hombre se ha atrevido nunca a pintarse tal como es. ec6b7dead0bfb1c1384ac0b1fd3af7c140f003ce4bf7f3ef42aaf05c972ef3fb"
+- "No hay amor sin un poco de inocencia. 5e6458348121433d6f442145cbcb690a335a319cabda8403b0a4c9a4cfeafaf3"
+- "Inocentes sin saberlo en un principio, ahora éramos culpables sin quererlo: c89a7711a59a9aad79ef190d9bd0093639ad1f1ab11485a386d8bdf727d27f91"
+- "Ese día comprendí que había dos verdades y que una de ellas nunca debía decirse. 3e5111510b794d4206aa5c07664218be81111006da5f42022ec11d2aacce6c7a"
+
 
 # Alessandro Baricco
-
-## Seda
-
-- "Le estaba mirando, con ojos completamente mudos, a una distancia de siglos. 6dbf5693cca071d0a9b5ddf627ce8a0c12e2a02f86f860d7dbceee78bdf5b54d"
-- "Él narraba despacio, mirando en el aire cosas que los demás no veían. e4b1be5da3e00c5284732397d6bcb26684ca9f6d1269bf4ce013d5b26a4cecd9"
 
 ## Novecento
 
 - "En los ojos de la gente puede verse lo que verán, no lo que han visto. 091bbcc6f0561d8f620cf7d81f4b70ee4477dec65e26756b43901396d94555a5"
 - "«Cuando no sabes lo que es, entonces es jazz». f42c3f221d43119c43801658ad93e7b2b04eb8496c8b28946f4c29a07f02f97c"
 - "«A la mierda el reglamento». b027b31ebf846c7eaeb3afb3f8f6f7fe1d7f00db280a9b3135076c5383bd137a"
+
+## Seda
+
+- "Le estaba mirando, con ojos completamente mudos, a una distancia de siglos. 6dbf5693cca071d0a9b5ddf627ce8a0c12e2a02f86f860d7dbceee78bdf5b54d"
+- "Él narraba despacio, mirando en el aire cosas que los demás no veían. e4b1be5da3e00c5284732397d6bcb26684ca9f6d1269bf4ce013d5b26a4cecd9"
 
 
 # Anthony Bourdain
@@ -167,10 +167,6 @@
 
 # Ernest Hemingway
 
-## Fiesta
-
-- "Ella me miraba a los ojos con aquella manera de mirar que a uno le hacía preguntarse si veía realmente algo de lo que estaba ante ella. Sus ojos podían continuar mirando y mirando cuando todos los demás ojos hubiesen dejado de mirar. Miraba como si no hubiera nada en la tierra a lo que no se atreviera a mirar así; pero, en realidad, ¡tenía miedo de tantas cosas! ce27a173321cf7e8b6ac031b3c618f106414f277018f2ca3e7c46bc17483dfad"
-
 ## 20141111
 
 - "I’ve seen you, beauty, and you belong to me now, whoever you are waiting for and if I never see you again, I thought. You belong to me and all Paris belongs to me and I belong to this notebook and this pencil. 36930103ea38d30e83cb9e38cd1da481c3bdbb295b735fbc9e3dc8733458b04c"
@@ -189,18 +185,22 @@
 - "—Dice que abrir botellas es lo que te convierte en un borracho —explicó Bill. 2f3eb72bf0503d1cbc635c361dda67f37d878cdb94ec82a9b57eb104dc6cf5da"
 - "La noche siguiente, de vuelta en Mestre, no le habló de Jesús a la chica con la que subió a la habitación de la villa Rossa. Ni a ella ni a nadie, nunca. 133c1c6a1b5a7cce5fe9eb0e64fa0e8f5711779464cf22d336506ae4999b43a5"
 
+## Fiesta
+
+- "Ella me miraba a los ojos con aquella manera de mirar que a uno le hacía preguntarse si veía realmente algo de lo que estaba ante ella. Sus ojos podían continuar mirando y mirando cuando todos los demás ojos hubiesen dejado de mirar. Miraba como si no hubiera nada en la tierra a lo que no se atreviera a mirar así; pero, en realidad, ¡tenía miedo de tantas cosas! ce27a173321cf7e8b6ac031b3c618f106414f277018f2ca3e7c46bc17483dfad"
+
 
 # Fiódor Dostoyevski
+
+## Memorias del subsuelo
+
+- "Porque un hombre inteligente del siglo XIX debe, y está obligado moralmente, ser un sujeto fundamentalmente sin carácter; puesto que un hombre con carácter, es decir, toda una personalidad, es una criatura limitada por excelencia. c53baff6a6307e684b1c9220c5d16d16270f02eec06620a67b0bbb490df67ad6"
 
 ## El idiota
 
 - "mí! En ese caso, ¡convertiría cada minuto en un siglo entero, sin perder uno solo, apuraría cada instante, y no malgastaría nada!». 79e00ea4ca7d4430000f6443f426af87174db01efdebffe1ef94ec420a9129e5"
 - "le dije que ni él ni yo les enseñábamos 5bd1ed6f386f84b3fa6781f76a5e1bb74a676fa2eead04213493d13bc2974deb"
 - "nada, y que de hecho eran ellos los que nos enseñaban a nosotros. 6b4c00b0a995f7dde551a010e1f0d8c47f3dcba46349d70ea1097a68c2ad4cd5"
-
-## Memorias del subsuelo
-
-- "Porque un hombre inteligente del siglo XIX debe, y está obligado moralmente, ser un sujeto fundamentalmente sin carácter; puesto que un hombre con carácter, es decir, toda una personalidad, es una criatura limitada por excelencia. c53baff6a6307e684b1c9220c5d16d16270f02eec06620a67b0bbb490df67ad6"
 
 
 # Franz Kafka
@@ -221,13 +221,13 @@
 
 # Hermann Hesse
 
-## Siddhartha
-
-- "—¿También has aprendido tú —le preguntó una vez—, has aprendido del río el secreto de que no existe el tiempo? El rostro de Vasudeva se iluminó con una radiante sonrisa. —Sí, Siddhartha —contestó—. ¿Quieres decir esto: que el río está en todas partes a la vez? ¿En su fuente y en la desembocadura, en la cascada, en la balsa, en la catarata, en el mar, en la montaña, en todas partes a la vez? ¿Y que para él sólo existe el presente y desconoce la sombra del futuro? a34a6e621863dc972e74a37b71b5528217e8895e0ad56b8507eed44fa45b7941"
-
 ## Bajo las ruedas
 
 - "la sensación de que sólo él estaba parado mientras el resto del mundo seguía avanzando. 22e5ab9ae892b4747551ba4d738d04711c5397c483a7c830ddc8d41b538d59f6"
+
+## Siddhartha
+
+- "—¿También has aprendido tú —le preguntó una vez—, has aprendido del río el secreto de que no existe el tiempo? El rostro de Vasudeva se iluminó con una radiante sonrisa. —Sí, Siddhartha —contestó—. ¿Quieres decir esto: que el río está en todas partes a la vez? ¿En su fuente y en la desembocadura, en la cascada, en la balsa, en la catarata, en el mar, en la montaña, en todas partes a la vez? ¿Y que para él sólo existe el presente y desconoce la sombra del futuro? a34a6e621863dc972e74a37b71b5528217e8895e0ad56b8507eed44fa45b7941"
 
 
 # J Krishnamurti
@@ -310,25 +310,21 @@
 
 # Jorge Luis Borges
 
+## Ficciones
+
+- "Una de las escuelas de Tlön llega a negar el tiempo: razona que el presente es indefinido, que el futuro no tiene realidad sino como esperanza presente, que el pasado no tiene realidad sino como recuerdo presente 67a9a6f9901795f3ae5282d0f658b1f7a5aca058a3f20cba838bcfc255e4e227"
+- "Que el cielo exista, aunque mi lugar sea el infierno. f1df1d2e4682fc9b6b1c73965b81ef8dbd07a6f0931665c39f949974d95c46a2"
+
 ## El Aleph
 
 - "Como Cornelio Agrippa, soy dios, soy héroe, soy filósofo, soy demonio y soy mundo, lo cual es una fatigosa manera de decir que no soy. b635793cbbd78b547af11e1b5f71331f2c3c1834c5e829adfef52f460ab1c6e5"
-- "Hay quien busca el amor de una mujer para olvidarse de ella, para no pensar más en daf01db6c0091a7e0982c67849c0615c3d6fdb899a57d77a4085483ac780017c"
 - "Hay quien busca el amor de una mujer para olvidarse de ella, para no pensar más en ella 447bc508d9bfc1aea2def3de6b6946c68feafec646ab51193a806cc8c03fe110"
 - "Lo creerás, Ariadna? —dijo Teseo—. El minotauro apenas se defendió. d58c8f4e9a5db2ad08a12be8c0d7fa97037f449f84c66f583237f4dd384225e8"
 - "antes de entrar en batalla, nadie sabía quién es. Alguien a039fd3ad076c6cff3ba9873bccce90ad2e4a55911204c0521a72f2584baecbb"
-- "Que el cielo exista, aunque acb3c520378e042109e44cd4efc2e04f68441966aed65b83eddea9d59ffc80d8"
 - "Que el cielo exista, aunque nuestro lugar sea el infierno. de0dadad9a303dd84e537038bb3b65d780dc460a7858b868e913460835f2b980"
 - "ello es una piadosa exageración, porque no hay hombre que esté libre de culpa. 52a70ebe5d89863f1811c3e87fc75d8c698ca929fc9c61f4a0b23f3e91135268"
 - "Comprendí que el trabajo del poeta no estaba en la poesía; estaba en la invención de razones para que la poesía fuera admirable; 1ea1c6fe8ac13e79d3acf0be19e49481b492b1b718962f408521c9688c987758"
 - "vi tu cara, y sentí vértigo y lloré, porque mis ojos habían visto ese objeto secreto y conjetural, cuyo nombre usurpan los hombres, pero que ningún hombre ha mirado: el inconcebible universo. e694656fb8bc7f0593a3ef3932f89c1f186479fb876caa46daf78fca3e1b89e8"
-
-## Ficciones
-
-- "Una de las escuelas de Tlön llega a negar el tiempo: razona que el presente es indefinido, que el futuro no tiene realidad sino como esperanza presente, que el pasado no tiene realidad sino como recuerdo presente 67a9a6f9901795f3ae5282d0f658b1f7a5aca058a3f20cba838bcfc255e4e227"
-- "metempsicosis.*[En el decurso de esta noticia, me he 790c52431ea3201fe3e788dabd8403bc780c33205470667435671427bbe6b1b1"
-- "enteros: a su furor higiénico, ascético, 13d1a1f62d200855c3afc560e94b51af6c4281c741388bfe6b9e2d322c782fb0"
-- "Que el cielo exista, aunque mi lugar sea el infierno. f1df1d2e4682fc9b6b1c73965b81ef8dbd07a6f0931665c39f949974d95c46a2"
 
 
 # José Saramago
@@ -343,7 +339,6 @@
 
 ## Matadero Cinco
 
-- "El arte no es posible si no baila como pareja de la muerte, escribía. Y también: «La 9ff16f5a6df2b06aebc88af9e8c65447a16b7da2c2d006ae7e60430818a48f5c"
 - "El arte no es posible si no baila como pareja de la muerte, escribía. fc3fbcd957591eeb9c9f32618a3b2c152724ee3ace535e1756f8dec1a0768787"
 - "CONCÉDEME, SEÑOR SERENIDAD PARA ACEPTAR LAS COSAS QUE NO PUEDO CAMBIAR, VALOR PARA CAMBIAR LAS QUE SÍ PUEDO Y SABIDURÍA PARA DISTINGUIR LAS UNAS DE LAS OTRAS c506a6c75e7295b130cf830390ff5c063e93aa325ac6aba688ca78e09737b01d"
 - "El miedo le decía cuándo debía detenerse. La falta de miedo le decía cuándo debía seguir adelante. ebe6ec0778e21b50799a5fa598718f5a4c86f2dae4668d2503703d982150a79a"
@@ -398,7 +393,6 @@
 
 - "Sé que tenía ojos verdes, pero no puedo sentirme frente a su mirada. 15c9413dab48e080356c0f49292d7ab69b2c7034f88e510c49ffc6d31960052f"
 - "«Ya lo sabía», dijo. «Por eso vine a tomar café». 4bdded6e2aee35ead3c7f6bcf39d7846a956a715d518f3c72d510fe0d7362c6f"
-- "¿Y si el mar fuera Dios? También 76b6720fbee283ebd6547fbb7d0d1fc784b815d03d52e889a400f7cc43b30521"
 - "¿Y si el mar fuera Dios? 1b99805769376af38b000995213b6f2cbf2a97de7b56a0578545cb4059cbe810"
 - "Frío y sol. Sol de invierno, que es el más afectuoso, el más benévolo 778b6670fb1784952443aaba8d099df13f4bf7dc3804000b600492654bb2d5f6"
 
@@ -429,8 +423,6 @@
 - "habiendo de ser la comedia, según le parece a Cicerón, espejo de la vida humana, ejemplo de las costumbres e imagen de la verdad, 96f4028e6b40c80ad2814172ab1b2ad285f79b4ebf0d10a99387e7292f436b5e"
 - "ponerte en un laberinto de imaginaciones del que no aciertes a salir aunque tengas la soga de Teseo. 11aa95d798257b279c081016f235348ac8c2b33e4cb9103eb7a6914c7b4637d9"
 - "Un Viriato tuvo Lusitania; un César, Roma; un Aníbal, Cartago; un Alejandro, Grecia; un conde Fernán González, Castilla; un Cid, Valencia; un Gonzalo Fernández, Andalucía; un Diego García de Paredes, Extremadura; un Garci Pérez de Vargas, Jerez; un Garcilaso, Toledo; un don Manuel de León, Sevilla: 193a19bc1a46cef7529fcdd9d600004e915660994eeac4212c70dd000907a3d6"
-- "Los trabajos de Persiles y Sigismunda, 1d71cfa488c3dfd669d0cbfc914f503f83af08adfdf0ce57737ebc2316e12749"
-- "Los trabajos de Persiles y Sigismunda, 1d71cfa488c3dfd669d0cbfc914f503f83af08adfdf0ce57737ebc2316e12749"
 - "enmendando este abuso y condenando aquel, reformando una costumbre y desterrando otra, haciéndose cada uno de los tres un nuevo legislador, un Licurgo moderno o un Solón flamante, y arreglaron de tal manera la república, que no pareció sino que la habían puesto en una fragua y sacado otra distinta de la que pusieron; 6142739ca94c135f1b96699098c1d734d5a8bf7d234a47a36af5539e9748551a"
 - "—Basta que me entienda Dios, mujer, que Él es el entendedor de todas las cosas, y quédese esto aquí. 9ce19dc40e4e8d1a33b7545f4554271eab91f9c7f494f6db3447108878069622"
 - "¿Quién piensas tú que arrojó a Horacio del puente abajo, armado de todas sus armas, a la profundidad del Tíber? ¿Quién abrasó el brazo y la mano a Mucio? ¿Quién impelió a Curcio a lanzarse en la profunda sima ardiente que apareció en medio de Roma? ¿Quién hizo pasar el Rubicón a César, contra todos los agüeros que se le habían mostrado en contra? 1f3c432e4f60653aec44714e8f22222286b30fdb967d5ee6d9ffa904c4870b4c"
@@ -457,6 +449,10 @@
 
 
 # Oscar Wilde
+
+## La importancia de discutirlo todo
+
+- "El hombre es menos el que es cuando habla con su propia voz. Dale una máscara y te dirá la verdad. ERNEST: 38ba7e15347b427aacbb67c77fc7ed69fecba2bb3a082a4621574508f4aa7583"
 
 ## La importancia de llamarse Ernesto
 
@@ -492,10 +488,6 @@
 - "Así como quienes no aman a Platón más que la Verdad no pueden trasponer el umbral de la Academia, así quienes no aman la Belleza más que la Verdad nunca conocerán el santuario más íntimo del Arte. f4abbc0f2ee1162802e25e38e8d04a066cace16764ffd6ebc3c89d13c89a3a63"
 - "veremos la joya en la cabeza del sapo c8b7dbc3e17eef449dea5c93534b3adbdd1637f58d5a6d92dd427aa00c5e0790"
 
-## La importancia de discutirlo todo
-
-- "El hombre es menos el que es cuando habla con su propia voz. Dale una máscara y te dirá la verdad. ERNEST: 38ba7e15347b427aacbb67c77fc7ed69fecba2bb3a082a4621574508f4aa7583"
-
 
 # Rick Rubin
 
@@ -518,15 +510,15 @@
 - "pues sé que soy hombre y que el día de mañana no lo tengo más seguro que lo puedas tener tú. 08b0c532e0929db7234a90b5432ec4f26b4044f338ee2d9801ede492bf311b39"
 - "CORIFEO. —(A un servidor de Creonte.) Aparta de tus manos a la muchacha, pronto. CREONTE. —No mandes en lo que no imperas. CORIFEO. —Suéltalo, te digo. CREONTE. —(Al mismo servidor.) Y yo que sigas tu camino. 0dfd46e270272f1e199211bee8277982bbd8d58805933cd64d7e6a0dc95d88b6"
 
-## Antígona
-
-- "ANTÍGONA. —No nací para compartir el odio sino el amor. c635a98cc1b022a96cd925e6fcae345016a22f1e6e53bde229a503ceb86f2a55"
-- "Eros es el muchacho, hijo de Afrodita, que dispara dardos al corazón de dioses y hombres para enamorarlos. La literatura, sobre todo, posterior a Sófocles, asimila los efectos de sus dardos a enfermedad que puede llevar a la locura. 5aa489f36ccb0a87f92f62256ffc9e5d576ca043c534eb66c1e343f0b0dd93fe"
-
 ## Edipo Rey
 
 - "—El que no tiene temor ante los hechos tampoco tiene miedo a la palabra. c85b3eb56d15f85e4a178430b554a050ab72f4e71aa2292054c20420723022a7"
 - "CREONTE. —No lo sé. De lo que no comprendo, prefiero guardar silencio. 2a30bb844ddd4bba985d935e7dd941649040d6122af1f023f0e9b1399721c34e"
+
+## Antígona
+
+- "ANTÍGONA. —No nací para compartir el odio sino el amor. c635a98cc1b022a96cd925e6fcae345016a22f1e6e53bde229a503ceb86f2a55"
+- "Eros es el muchacho, hijo de Afrodita, que dispara dardos al corazón de dioses y hombres para enamorarlos. La literatura, sobre todo, posterior a Sófocles, asimila los efectos de sus dardos a enfermedad que puede llevar a la locura. 5aa489f36ccb0a87f92f62256ffc9e5d576ca043c534eb66c1e343f0b0dd93fe"
 
 
 # Søren Kierkegaard
@@ -571,14 +563,14 @@
 
 # Vladimir Nabokov
 
-## Lolita
-
-- "Pueden confiar en que la prosa de los asesinos sea siempre elegante. 41dd1cd8b328077fa1a2a90e5764985a782e1b26973c615786ad34e33fa0dac3"
-
 ## La defensa
 
 - "«Las heroínas de Turgueniev lo hacían. ¿Soy menos que ellas?». 30bc7d751e82939572fb2b597f79ecf9091fcfc9eb7d07afb0c903ae2b38e59b"
 - "Lo llevó varias veces al museo y le mostró sus cuadros favoritos y le explicó que en Flandes, donde había lluvia y niebla, los pintores usaban colores muy vivos, mientras que en España, un país de sol, había nacido el más sombrío de todos los maestros. 4d2ef34aa4134f5053c74456d34b1fe7dbfb4c3f4d742a5527f1a94d77cbbbf4"
+
+## Lolita
+
+- "Pueden confiar en que la prosa de los asesinos sea siempre elegante. 41dd1cd8b328077fa1a2a90e5764985a782e1b26973c615786ad34e33fa0dac3"
 
 
 # Voltaire
@@ -607,6 +599,12 @@
 
 # Yukio Mishima
 
+## El rumor del oleaje
+
+- "Hatsue había ido a la playa corriendo, y sus senos subían y bajaban con rapidez. A Shinji le recordaban las grandes olas azul oscuro de alta mar. b03191ab5624b468ecc2c131ec236ae78c0dc7779a52f064e5833b53d71efbcd"
+- "Sus mejillas estaban tan próximas que casi se tocaban. Cada uno aspiraba el olor del otro, una fragancia como la del agua salada. Ambos percibían el calor del otro. Sus labios resecos y agrietados se tocaron. Los de Hatsue tenían un ligero sabor salado. «Son como las algas», pensó Shinji. Entonces el hechizo se rompió. c939e4e63cc6260847ab141c2d2fcdb36e192ed714364f6ca064d1a5679acf6f"
+- "Todas las canciones sin excepción eran baladas sentimentales que hablaban de puertos o marineros, niebla o recuerdos de mujeres, la Cruz del Sur, el licor o los suspiros. fc792b993c8401e52c5bf7482dd0be2e5da2d81f2e41aea527cb272c3264cbb4"
+
 ## El marino que perdió la gracia del mar
 
 - "«Espera cada día la muerte a fin de que, cuando esta llegue, mueras en paz. La desdicha, cuando ocurre, no es tan espantosa como la temíamos…» (Hagakuré, siglo XVIII) En Occidente el rebelde individualista cuenta con un intuitivo prestigio: luchar contra la corriente, significarse, destacar, saber mantener valores propios contra los prejuicios del grupo dominante, son actitudes apreciadas incluso aunque no se compartan las referencias políticas o morales del disidente. 11230ba7d5578775144d045e8541600f076f85d4e603559b39dc5ca939523909"
@@ -619,10 +617,4 @@
 - "y cuando regresaba al gran salón pensaba que si me volviese, 85c94560cdbb7f85537d9df2ef237cfc5ebf20977867512468b8482272a1fd95"
 - "Pero aunque lo hubiese mirado cien veces: el hecho de encontrarlo allí me dejaba maravillado; y cuando regresaba al gran salón pensaba que si me volviese, de repente, para verlo otra vez, su silueta se esfumaría al instante, como la de Eurídice. 4a1d2993e9999f11f2434e62e689b1b81d70d93ada21fe1a646730d93e84168f"
 - "¿Por cuánto tiempo? El secreto pertenecía al futuro. cc8c05832adfe985abf55b34b361036b23dff2007dad23af0a56199193a72cdf"
-
-## El rumor del oleaje
-
-- "Hatsue había ido a la playa corriendo, y sus senos subían y bajaban con rapidez. A Shinji le recordaban las grandes olas azul oscuro de alta mar. b03191ab5624b468ecc2c131ec236ae78c0dc7779a52f064e5833b53d71efbcd"
-- "Sus mejillas estaban tan próximas que casi se tocaban. Cada uno aspiraba el olor del otro, una fragancia como la del agua salada. Ambos percibían el calor del otro. Sus labios resecos y agrietados se tocaron. Los de Hatsue tenían un ligero sabor salado. «Son como las algas», pensó Shinji. Entonces el hechizo se rompió. c939e4e63cc6260847ab141c2d2fcdb36e192ed714364f6ca064d1a5679acf6f"
-- "Todas las canciones sin excepción eran baladas sentimentales que hablaban de puertos o marineros, niebla o recuerdos de mujeres, la Cruz del Sur, el licor o los suspiros. fc792b993c8401e52c5bf7482dd0be2e5da2d81f2e41aea527cb272c3264cbb4"
 
