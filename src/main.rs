@@ -1,5 +1,6 @@
 use std::{
     collections::{HashMap, HashSet},
+    fmt::Display,
     fs::{read_to_string, File},
     io::BufReader,
 };
@@ -10,17 +11,79 @@ use anyhow::Context;
 use regex::Regex;
 use sha2::{Digest, Sha256};
 
-#[derive(Debug)]
+#[derive(Debug, Default, Clone, PartialEq, Eq, Hash, PartialOrd, Ord)]
+struct Author(String);
+
+impl Display for Author {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        self.0.fmt(f)
+    }
+}
+
+impl From<&str> for Author {
+    fn from(value: &str) -> Self {
+        Author(value.to_string())
+    }
+}
+
+impl TryFrom<&String> for Author {
+    type Error = anyhow::Error;
+
+    fn try_from(value: &String) -> Result<Self, Self::Error> {
+        let re_author = Regex::new(r"\(([\w ]+)\)$").unwrap();
+        let author = re_author
+            .captures(value)
+            .context("author was not found")?
+            .get(1)
+            .context("author was not found")?
+            .as_str()
+            .trim()
+            .to_string();
+        Ok(Author(author))
+    }
+}
+
+#[derive(Debug, Default, Clone, PartialEq, Eq, Hash, PartialOrd, Ord)]
+struct Book(String);
+
+impl Display for Book {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        self.0.fmt(f)
+    }
+}
+
+impl From<&str> for Book {
+    fn from(value: &str) -> Self {
+        Book(value.to_string())
+    }
+}
+
+impl TryFrom<&String> for Book {
+    type Error = anyhow::Error;
+
+    fn try_from(value: &String) -> Result<Self, Self::Error> {
+        let re_book = Regex::new(r"^[^()]+").unwrap();
+        let book = re_book
+            .find(value)
+            .context("book was not found")?
+            .as_str()
+            .trim()
+            .to_string();
+        Ok(Book(book))
+    }
+}
+
+#[derive(Debug, Default)]
 struct Quote {
-    author: String,
-    book: String,
+    author: Author,
+    book: Book,
     quote: String,
     hash: String,
 }
 
 #[derive(Debug, Default)]
 struct Collection {
-    collection: HashMap<String, Vec<Quote>>,
+    collection: HashMap<Author, Vec<Quote>>,
 }
 
 impl Collection {
@@ -54,38 +117,12 @@ impl FromIterator<Quote> for Collection {
     }
 }
 
-impl Quote {
-    fn try_author(string: &str) -> anyhow::Result<String> {
-        let re_author = Regex::new(r"\(([\w ]+)\)$").unwrap();
-        let author = re_author
-            .captures(string)
-            .context("author was not found")?
-            .get(1)
-            .context("author was not found")?
-            .as_str()
-            .trim()
-            .to_string();
-        Ok(author)
-    }
-
-    fn try_book(string: &str) -> anyhow::Result<String> {
-        let re_book = Regex::new(r"^[^()]+").unwrap();
-        let book = re_book
-            .find(string)
-            .context("book was not found")?
-            .as_str()
-            .trim()
-            .to_string();
-        Ok(book)
-    }
-}
-
 impl TryFrom<&[String]> for Quote {
     type Error = anyhow::Error;
 
     fn try_from(chunk: &[String]) -> Result<Self, Self::Error> {
-        let author = Quote::try_author(&chunk[0])?;
-        let book = Quote::try_book(&chunk[0])?;
+        let author = Author::try_from(&chunk[0])?;
+        let book = Book::try_from(&chunk[0])?;
         let quote = chunk[3].to_string();
         let hash = format!("{:x}", Sha256::digest(&quote));
         Ok(Quote {
@@ -107,9 +144,8 @@ fn read_lines(filename: &str) -> Vec<String> {
     result
 }
 
-fn authors(collection: &Collection) -> Vec<&String> {
-    let mut authors: Vec<&String> = collection.collection.keys().collect::<Vec<&String>>();
-
+fn authors(collection: &Collection) -> Vec<&Author> {
+    let mut authors = collection.collection.keys().collect::<Vec<_>>();
     authors.sort();
     authors
 }
@@ -122,12 +158,12 @@ fn write_quotes_to_file(
 
     // Write the index at the top of the file
     writeln!(file, "# Index\n")?;
-    for author in &authors {
+    for author in authors.as_slice() {
         writeln!(
             file,
             "- [{}](#{})",
-            author.to_lowercase().replace(' ', "-"),
-            author.to_lowercase().replace(' ', "-")
+            author.0.to_lowercase().replace(' ', "-"),
+            author.0.to_lowercase().replace(' ', "-")
         )?;
     }
     writeln!(file)?; // Add an extra newline
@@ -139,7 +175,7 @@ fn write_quotes_to_file(
         // Get the quotes for the author
         if let Some(quotes) = collection.collection.get(author) {
             // Group quotes by book title
-            let mut quotes_by_book: HashMap<&str, Vec<&Quote>> = HashMap::new();
+            let mut quotes_by_book: HashMap<&Book, Vec<&Quote>> = HashMap::new();
             for quote in quotes {
                 quotes_by_book.entry(&quote.book).or_default().push(quote);
             }
@@ -197,9 +233,9 @@ mod tests {
     #[test]
     fn test_try_author_success() {
         let input = "Indigno de ser humano (Osamu Dazai)".to_string();
-        let expected_author = "Osamu Dazai".to_string();
+        let expected_author = "Osamu Dazai".into();
 
-        let result = Quote::try_author(&input).expect("Author should be found");
+        let result = Author::try_from(&input).expect("Author should be found");
 
         assert_eq!(result, expected_author);
     }
@@ -207,9 +243,9 @@ mod tests {
     #[test]
     fn test_try_author_success_special_char_in_name() {
         let input = "El idiota (Fiódor Dostoyevski)".to_string();
-        let expected_author = "Fiódor Dostoyevski".to_string();
+        let expected_author = "Fiódor Dostoyevski".into();
 
-        let result = Quote::try_author(&input).expect("Author should be found");
+        let result = Author::try_from(&input).expect("Author should be found");
 
         assert_eq!(result, expected_author);
     }
@@ -217,7 +253,7 @@ mod tests {
     #[test]
     fn test_try_author_failure() {
         let input = "Indigno de ser humano".to_string(); // No author provided
-        let result = Quote::try_author(&input);
+        let result = Author::try_from(&input);
 
         assert!(
             result.is_err(),
@@ -228,9 +264,9 @@ mod tests {
     #[test]
     fn test_try_book_success() {
         let input = "Indigno de ser humano (Osamu Dazai)".to_string();
-        let expected_book = "Indigno de ser humano".to_string();
+        let expected_book = "Indigno de ser humano".into();
 
-        let result = Quote::try_book(&input).expect("Book should be found");
+        let result = Book::try_from(&input).expect("Book should be found");
 
         assert_eq!(result, expected_book);
     }
@@ -238,7 +274,7 @@ mod tests {
     #[test]
     fn test_try_book_failure() {
         let input = "(Osamu Dazai)".to_string(); // No book title provided
-        let result = Quote::try_book(&input);
+        let result = Book::try_from(&input);
 
         assert!(
             result.is_err(),
@@ -249,9 +285,9 @@ mod tests {
     #[test]
     fn test_try_book_with_special_characters() {
         let input = "¡Indigno de ser humano! (Osamu Dazai)".to_string();
-        let expected_book = "¡Indigno de ser humano!".to_string();
+        let expected_book = "¡Indigno de ser humano!".into();
 
-        let result = Quote::try_book(&input).expect("Book should be found");
+        let result = Book::try_from(&input).expect("Book should be found");
 
         assert_eq!(result, expected_book);
     }
@@ -259,9 +295,9 @@ mod tests {
     #[test]
     fn test_try_author_with_extra_spaces() {
         let input = "Indigno de ser humano ( Osamu Dazai )".to_string();
-        let expected_author = "Osamu Dazai".to_string();
+        let expected_author = "Osamu Dazai".into();
 
-        let result = Quote::try_author(&input).expect("Author should be found");
+        let result = Author::try_from(&input).expect("Author should be found");
 
         assert_eq!(result, expected_author);
     }
