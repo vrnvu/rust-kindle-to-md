@@ -33,7 +33,7 @@ impl TryFrom<&String> for Author {
         let re_author = Regex::new(r"\(([\w ]+)\)$").unwrap();
         let author = re_author
             .captures(value)
-            .context("author was not found")?
+            .with_context(|| format!("failed to find author in string: '{}'", value))?
             .get(1)
             .context("author was not found")?
             .as_str()
@@ -64,7 +64,7 @@ impl TryFrom<&String> for Book {
         let re_book = Regex::new(r"^[^()]+").unwrap();
         let book = re_book
             .find(value)
-            .context("book was not found")?
+            .with_context(|| format!("failed to find book in string: '{}'", value))?
             .as_str()
             .trim();
         Ok(book.into())
