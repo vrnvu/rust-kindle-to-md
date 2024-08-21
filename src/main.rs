@@ -1,4 +1,3 @@
-use core::panic;
 use std::{
     collections::{HashMap, HashSet},
     fs::{read_to_string, File},
@@ -20,7 +19,7 @@ struct Quote {
     hash: String,
 }
 
-#[derive(Debug)]
+#[derive(Debug, Default)]
 struct Collection {
     collection: HashMap<String, Vec<Quote>>,
 }
@@ -35,13 +34,13 @@ impl Collection {
     fn add_quote(&mut self, quote: Quote) {
         self.collection
             .entry(quote.author.clone())
-            .or_insert_with(Vec::new)
+            .or_default()
             .push(quote);
     }
 }
 
 impl Quote {
-    fn try_author(string: &String) -> anyhow::Result<String> {
+    fn try_author(string: &str) -> anyhow::Result<String> {
         let re_author = Regex::new(r"\(([\w ]+)\)$").unwrap();
         let author = re_author
             .captures(string)
@@ -54,7 +53,7 @@ impl Quote {
         Ok(author)
     }
 
-    fn try_book(string: &String) -> anyhow::Result<String> {
+    fn try_book(string: &str) -> anyhow::Result<String> {
         let re_book = Regex::new(r"^[^()]+").unwrap();
         let book = re_book
             .find(string)
@@ -116,8 +115,8 @@ fn write_quotes_to_file(collection: &Collection) -> anyhow::Result<()> {
         writeln!(
             file,
             "- [{}](#{})",
-            author.to_lowercase().replace(" ", "-"),
-            author.to_lowercase().replace(" ", "-")
+            author.to_lowercase().replace(' ', "-"),
+            author.to_lowercase().replace(' ', "-")
         )?;
     }
     writeln!(file)?; // Add an extra newline
@@ -131,10 +130,7 @@ fn write_quotes_to_file(collection: &Collection) -> anyhow::Result<()> {
             // Group quotes by book title
             let mut quotes_by_book: HashMap<&str, Vec<&Quote>> = HashMap::new();
             for quote in quotes {
-                quotes_by_book
-                    .entry(&quote.book)
-                    .or_insert_with(Vec::new)
-                    .push(quote);
+                quotes_by_book.entry(&quote.book).or_default().push(quote);
             }
 
             // Write each book title and its quotes
@@ -169,7 +165,7 @@ fn main() -> anyhow::Result<()> {
     let lines = read_lines(filename);
     let all_quotes = lines
         .chunks(5)
-        .flat_map(|c| Quote::try_from(c))
+        .flat_map(Quote::try_from)
         .collect::<Vec<Quote>>();
 
     let filters = read_hashes_from_file()?;
@@ -178,10 +174,13 @@ fn main() -> anyhow::Result<()> {
         .filter(|quote| !filters.contains(&quote.hash))
         .collect::<Vec<Quote>>();
 
-    let mut collection = Collection::new();
-    for quote in quotes {
-        collection.add_quote(quote);
-    }
+    let collection = {
+        let mut collection = Collection::new();
+        for quote in quotes {
+            collection.add_quote(quote);
+        }
+        collection
+    };
 
     write_quotes_to_file(&collection)?;
 
