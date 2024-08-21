@@ -74,7 +74,7 @@ pub struct Quote {
 
 #[derive(Debug, Default)]
 pub struct Collection {
-    pub collection: HashMap<Author, Vec<Quote>>,
+    collection: HashMap<Author, Vec<Quote>>,
 }
 
 impl Collection {
@@ -82,6 +82,14 @@ impl Collection {
         Collection {
             collection: HashMap::new(),
         }
+    }
+
+    pub fn authors(&self) -> Vec<&Author> {
+        self.collection.keys().collect()
+    }
+
+    pub fn get(&self, author: &Author) -> Option<&Vec<Quote>> {
+        self.collection.get(author)
     }
 
     fn add_quote(&mut self, quote: Quote) {

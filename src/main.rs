@@ -19,7 +19,7 @@ fn read_lines(filename: &str) -> Vec<String> {
 }
 
 fn authors(collection: &Collection) -> Vec<&Author> {
-    let mut authors = collection.collection.keys().collect::<Vec<_>>();
+    let mut authors = collection.authors();
     authors.sort();
     authors
 }
@@ -47,7 +47,7 @@ fn write_quotes_to_file(
         writeln!(file, "\n# {}\n", author)?;
 
         // Get the quotes for the author
-        if let Some(quotes) = collection.collection.get(author) {
+        if let Some(quotes) = collection.get(author) {
             // Group quotes by book title
             let mut quotes_by_book: HashMap<&Book, Vec<&Quote>> = HashMap::new();
             for quote in quotes {
@@ -91,7 +91,7 @@ fn main() -> anyhow::Result<()> {
         .chunks(5)
         .flat_map(Quote::try_from)
         .filter(|quote| !filters.contains(&quote.hash))
-        .collect::<Collection>();
+        .collect();
 
     // Open the file in write mode, creating it if it doesn't exist
     let mut file_write = File::create("README.md")?;
