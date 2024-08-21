@@ -1,5 +1,6 @@
 use std::{
     collections::HashSet,
+    env,
     fs::{read_to_string, File},
     io::{BufRead, BufReader},
 };
@@ -32,6 +33,19 @@ fn read_hashes_from_file(file_path: &str) -> anyhow::Result<HashSet<String>> {
 }
 
 fn main() -> anyhow::Result<()> {
+    let args: Vec<String> = env::args().collect();
+    if args.len() > 2 {
+        panic!("cannot accept more than one argument")
+    }
+    let hash_present = if args.len() == 2 {
+        match args[1].as_str() {
+            "hash" => true,
+            _ => panic!("Invalid argument! Only 'hash' is accepted."),
+        }
+    } else {
+        false
+    };
+
     let file_clippings = "My Clippings.txt";
     let lines = read_lines(file_clippings);
 
@@ -46,7 +60,11 @@ fn main() -> anyhow::Result<()> {
 
     // Open the file in write mode, creating it if it doesn't exist
     let mut file_write = File::create("README.md")?;
-    collection.write_quotes_to_file(&mut file_write)?;
+    if hash_present {
+        collection.write_quotes_with_hash_to_file(&mut file_write)?;
+    } else {
+        collection.write_quotes_to_file(&mut file_write)?;
+    }
 
     Ok(())
 }
