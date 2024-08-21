@@ -41,7 +41,7 @@ fn main() -> anyhow::Result<()> {
     let collection: Collection = lines
         .chunks(5)
         .flat_map(Quote::try_from)
-        .filter(|quote| !filters.contains(&quote.hash))
+        .filter(|quote| !filters.contains(quote.hash()))
         .collect();
 
     // Open the file in write mode, creating it if it doesn't exist

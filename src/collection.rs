@@ -69,10 +69,16 @@ impl TryFrom<&String> for Book {
 
 #[derive(Debug, Default)]
 pub struct Quote {
-    pub author: Author,
-    pub book: Book,
-    pub quote: String,
-    pub hash: String,
+    author: Author,
+    book: Book,
+    quote: String,
+    hash: String,
+}
+
+impl Quote {
+    pub fn hash(&self) -> &String {
+        &self.hash
+    }
 }
 
 #[derive(Debug, Default)]
