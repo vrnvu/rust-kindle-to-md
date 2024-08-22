@@ -3,21 +3,29 @@ use std::{
     env,
     fs::{read_to_string, File},
     io::{BufRead, BufReader},
+    path::Path,
 };
 
 use collection::{Collection, Quote};
 
 pub mod collection;
 
-fn read_lines(filename: &str) -> anyhow::Result<Vec<String>> {
-    Ok(read_to_string(filename)?
+fn read_lines<P>(path: P) -> anyhow::Result<Vec<String>>
+where
+    P: AsRef<Path>,
+{
+    // TODO read_to_string loads the whole file in memory
+    Ok(read_to_string(path)?
         .lines()
         .map(|l| l.to_string())
         .collect())
 }
 
-fn read_hashes_from_file(file_path: &str) -> anyhow::Result<HashSet<String>> {
-    let file = File::open(file_path)?;
+fn read_hashes_from_file<P>(path: P) -> anyhow::Result<HashSet<String>>
+where
+    P: AsRef<Path>,
+{
+    let file = File::open(path)?;
     let reader = BufReader::new(file);
     let hashes: HashSet<String> = reader.lines().collect::<Result<HashSet<_>, _>>()?;
     Ok(hashes)
