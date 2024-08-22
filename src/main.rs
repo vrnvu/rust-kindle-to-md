@@ -1,33 +1,41 @@
 use std::{
     collections::HashSet,
     env,
-    fs::{read_to_string, File},
+    fmt::Debug,
+    fs::File,
     io::{BufRead, BufReader},
     path::Path,
 };
 
+use anyhow::Context;
 use collection::{Collection, Quote};
 
 pub mod collection;
 
 fn read_lines<P>(path: P) -> anyhow::Result<Vec<String>>
 where
-    P: AsRef<Path>,
+    P: AsRef<Path> + Debug,
 {
-    // TODO read_to_string loads the whole file in memory
-    Ok(read_to_string(path)?
+    let file = File::open(&path).with_context(|| format!("Failed to open file at {:?}", &path))?;
+    let reader = BufReader::new(file);
+    let lines: Vec<String> = reader
         .lines()
-        .map(|l| l.to_string())
-        .collect())
+        .collect::<Result<Vec<String>, _>>()
+        .with_context(|| format!("Failed to read lines from file at {:?}", path))?;
+
+    Ok(lines)
 }
 
 fn read_hashes_from_file<P>(path: P) -> anyhow::Result<HashSet<String>>
 where
-    P: AsRef<Path>,
+    P: AsRef<Path> + Debug,
 {
-    let file = File::open(path)?;
+    let file = File::open(&path).with_context(|| format!("Failed to open file at {:?}", &path))?;
     let reader = BufReader::new(file);
-    let hashes: HashSet<String> = reader.lines().collect::<Result<HashSet<_>, _>>()?;
+    let hashes: HashSet<String> = reader
+        .lines()
+        .collect::<Result<HashSet<_>, _>>()
+        .with_context(|| format!("Failed to read lines from file at {:?}", path))?;
     Ok(hashes)
 }
 
