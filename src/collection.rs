@@ -15,7 +15,7 @@ impl Display for Author {
 
 impl From<&str> for Author {
     fn from(value: &str) -> Self {
-        Author(value.to_string())
+        Author(value.to_owned())
     }
 }
 
@@ -46,7 +46,7 @@ impl Display for Book {
 
 impl From<&str> for Book {
     fn from(value: &str) -> Self {
-        Book(value.to_string())
+        Book(value.to_owned())
     }
 }
 
@@ -211,7 +211,7 @@ impl TryFrom<&[String]> for Quote {
     fn try_from(chunk: &[String]) -> Result<Self, Self::Error> {
         let author = Author::try_from(&chunk[0])?;
         let book = Book::try_from(&chunk[0])?;
-        let quote = chunk[3].to_string();
+        let quote = chunk[3].to_owned();
         let hash = format!("{:x}", Sha256::digest(&quote));
         Ok(Quote {
             author,
@@ -228,7 +228,7 @@ mod tests {
 
     #[test]
     fn test_try_author_success() {
-        let input = "Indigno de ser humano (Osamu Dazai)".to_string();
+        let input = "Indigno de ser humano (Osamu Dazai)".to_owned();
         let expected_author = "Osamu Dazai".into();
 
         let result = Author::try_from(&input).expect("Author should be found");
@@ -238,7 +238,7 @@ mod tests {
 
     #[test]
     fn test_try_author_success_special_char_in_name() {
-        let input = "El idiota (Fiódor Dostoyevski)".to_string();
+        let input = "El idiota (Fiódor Dostoyevski)".to_owned();
         let expected_author = "Fiódor Dostoyevski".into();
 
         let result = Author::try_from(&input).expect("Author should be found");
@@ -248,7 +248,7 @@ mod tests {
 
     #[test]
     fn test_try_author_failure() {
-        let input = "Indigno de ser humano".to_string(); // No author provided
+        let input = "Indigno de ser humano".to_owned(); // No author provided
         let result = Author::try_from(&input);
 
         assert!(
@@ -259,7 +259,7 @@ mod tests {
 
     #[test]
     fn test_try_book_success() {
-        let input = "Indigno de ser humano (Osamu Dazai)".to_string();
+        let input = "Indigno de ser humano (Osamu Dazai)".to_owned();
         let expected_book = "Indigno de ser humano".into();
 
         let result = Book::try_from(&input).expect("Book should be found");
@@ -269,7 +269,7 @@ mod tests {
 
     #[test]
     fn test_try_book_failure() {
-        let input = "(Osamu Dazai)".to_string(); // No book title provided
+        let input = "(Osamu Dazai)".to_owned(); // No book title provided
         let result = Book::try_from(&input);
 
         assert!(
@@ -280,7 +280,7 @@ mod tests {
 
     #[test]
     fn test_try_book_with_special_characters() {
-        let input = "¡Indigno de ser humano! (Osamu Dazai)".to_string();
+        let input = "¡Indigno de ser humano! (Osamu Dazai)".to_owned();
         let expected_book = "¡Indigno de ser humano!".into();
 
         let result = Book::try_from(&input).expect("Book should be found");
@@ -290,7 +290,7 @@ mod tests {
 
     #[test]
     fn test_try_author_with_extra_spaces() {
-        let input = "Indigno de ser humano ( Osamu Dazai )".to_string();
+        let input = "Indigno de ser humano ( Osamu Dazai )".to_owned();
         let expected_author = "Osamu Dazai".into();
 
         let result = Author::try_from(&input).expect("Author should be found");

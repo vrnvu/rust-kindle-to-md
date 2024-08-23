@@ -60,7 +60,7 @@ fn main() -> anyhow::Result<()> {
     let filters = read_hashes_from_file(file_filters)?;
 
     let collection: Collection = lines
-        .chunks(5)
+        .chunks_exact(5)
         .flat_map(Quote::try_from)
         .filter(|quote| !filters.contains(quote.hash()))
         .collect();
